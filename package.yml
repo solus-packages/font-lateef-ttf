@@ -1,0 +1,15 @@
+name       : font-lateef-ttf
+version    : 1
+release    : 1
+source     :
+    - http://stroblindustries.com/solus-tarballs/font-lateef-ttf-1.001.zip : ca3f84555007975d69c18f3d958f6a1a1c79c5b550c13d168d600e07efac1c09
+license    : OFL-1.1
+component  : desktop.font
+summary    : Lateef is an Arabic Script Unicode Font.
+description: |
+    Lateef is an Arabic Script Unicode Font.
+install    : |
+    install -D -d -m 00755 %installroot%/usr/share/doc/font-lateef-ttf
+    install -D -d -m 00755 %installroot%/usr/share/fonts/truetype/font-lateef-ttf
+    install -m 00644 *.ttf %installroot%/usr/share/fonts/truetype/font-lateef-ttf
+    cp -f OFL.txt %installroot%/usr/share/doc/font-lateef-ttf
